@@ -15,7 +15,7 @@
 ---
 # Mod 1 ActiveRecord Starter Repo
 
-In `config/database.yml`, you can change the name of the database from `db/cats.sqlite3` to whatever reflects your project. For example: `db/notes.sqlite3`. Doesn't really matter what you call the db. 
+In `config/database.yml`, you can change the name of the database from `db/dbName.sqlite3` to whatever reflects your project. For example: `db/notes.sqlite3`. Doesn't really matter what you call the db. 
 
 
 
@@ -42,7 +42,7 @@ class Cat < ActiveRecord::Base
 end
 ```
 
-- To view database, you can run `sqlite3 db/cats.db`, then can run `.schema` or `.tables` and can run any SQL commands. (Don't need to do this anymore though! ActiveRecord gives us a schema file!)
+- To view database, you can run `sqlite3 db/dbName.sqlite3`, then can run `.schema` or `.tables` and can run any SQL commands. (Don't need to do this anymore though! ActiveRecord gives us a schema file!)
 
 
 ### Steps to setup Ruby app with activerecord
@@ -58,8 +58,8 @@ end
 1. Add gems: 
   `bundle add activerecord pry sinatra, sinatra-activerecord rake sqlite3 require_all`
   run `bundle install`
-1. mkdir config and lib 
-1. mkdir lib/models
+1. mkdir config and app 
+1. mkdir app/models
 1. touch config/environment.rb config/database.yml
 1. Create your model files and models (make sure to have your models inherit from ActiveRecord::Base)
 1. In config/environment.rb:
@@ -67,7 +67,7 @@ end
   require 'bundler/setup'
   Bundler.require
 
-  require_all 'lib'
+  require_all 'app'
 ```
 1. In config/database.yml:
   ```
