@@ -1,3 +1,18 @@
+### Create characters table with :name (string)
+
+### Add an attribute of :age (integer) to the characters table (no rollsies backsies)
+
+### Remove :age (integer) attribute from characters table
+
+### Create movies table with :title (string)
+
+### Add that a character belongs_to :movie (in the database)
+
+### Add null: false contraint to movie_id on the characters table
+
+### Add foreign_key: true constraint to movie_id on the characters table
+---
+---
 # Mod 1 ActiveRecord Starter Repo
 
 In `config/database.yml`, you can change the name of the database from `db/cats.sqlite3` to whatever reflects your project. For example: `db/notes.sqlite3`. Doesn't really matter what you call the db. 
